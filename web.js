@@ -8,7 +8,6 @@ app.register('.mustache', stache);
 app.get('/', function(req, res){
 	res.render('main', {
 		locals: {
-		
 		}
 	})
 });
