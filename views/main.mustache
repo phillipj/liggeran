@@ -4,7 +4,18 @@ function track(email){
 }
 </script>
 <h1>Hvordan ligger du an?</h1>
-<p>Burde du fått mer lønnsøkning? Fikk alle andre mer enn deg dette oppgjøret=Her kan du se hvor mye andre fra ditt selskap tjener. Registrer hva du tjener og du vil kunne sammenligne med alle andre som kommer fra samme selskap.</p>
-<label for="email">Epost:</label>
+<ul>
+<li>Hva fikk de som tjener samme som meg i lønssøkning?</li>
+<li>Burde du fått mer lønnsøkning?</li>
+<li>Fikk alle andre mer enn deg dette oppgjøret?</li>
+</ul>
+<p>Registrer din epost for å motta nyheter om når tjensten åpnes.</p>
+<form>
+<fieldset>
+<label for="email"></label>
 <input type="text" name="email" id="email"/>
-<button name="save" onClick="return track(document.getElementById('email').value);">Jeg er interessert</button>
+<label>
+<button name="save" onClick="return track(document.getElementById('email').value);">Send</button>
+</label>
+</fieldset>
+</form>

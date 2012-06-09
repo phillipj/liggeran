@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Hvordan ligger du an?</title>
+    <link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet" href="css/looks.css">
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -13,10 +15,12 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
 </head>
 <body>
-{{{yield}}}
+<section role="main">
+    {{{yield}}}
+</section>
+
 </body>
 </html>

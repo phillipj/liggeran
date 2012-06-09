@@ -4,6 +4,7 @@ var stache = require('stache');
 var app = express.createServer(express.logger());
 app.set('view engine', 'mustache');
 app.register('.mustache', stache);
+app.use(express.static(__dirname + '/statics'));
 
 app.get('/', function(req, res){
 	res.render('main', {
