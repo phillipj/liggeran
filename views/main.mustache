@@ -1,5 +1,10 @@
+<script>
+function track(email){
+    _gaq.push(['_trackEvent', 'Liggeran', 'Click', email]);
+}
+</script>
 <h1>Hvordan ligger du an?</h1>
 <p>Burde du fått mer lønnsøkning? Fikk alle andre mer enn deg dette oppgjøret=Her kan du se hvor mye andre fra ditt selskap tjener. Registrer hva du tjener og du vil kunne sammenligne med alle andre som kommer fra samme selskap.</p>
-<label>Ny lønn:</label>
-<input type="text" name="salay"/>
-<button name="save" onClick="_gaq.push(['_trackEvent', 'Liggeran', 'Click', 'Registrer']);">Registrer og se hvordan du ligger an</button>
+<label for="email">Epost:</label>
+<input type="text" name="email" id="email"/>
+<button name="save" onClick="return track(document.getElementById('email').value);">Jeg er interessert</button>
