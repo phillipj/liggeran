@@ -9,13 +9,14 @@ function track(email){
 <li>Burde du fått mer lønnsøkning?</li>
 <li>Fikk alle andre mer enn deg dette oppgjøret?</li>
 </ul>
-<form>
-<fieldset>
-<legend>Registrer din epost for å motta nyheter om når tjensten åpnes.</legend>
-<label for="email"></label>
-<input type="text" name="email" id="email"/>
-<label>
-<button name="save" onClick="return track(document.getElementById('email').value);">Send</button>
-</label>
-</fieldset>
+<form action="/register" method="post">
+    <fieldset>
+        <legend>Registrer din epost for å motta nyheter om når tjensten åpnes.</legend>
+        <label for="email"></label>
+        <input type="text" name="email" id="email" value=""/>
+        <label>
+            <input type="submit" value="Registrer meg">
+<!--            <button name="save" onClick="return track(document.getElementById('email').value);">Send</button>-->
+        </label>
+    </fieldset>
 </form>
