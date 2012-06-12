@@ -9,9 +9,17 @@ function track(email){
 <li>Burde du fått mer lønnsøkning?</li>
 <li>Fikk alle andre mer enn deg dette oppgjøret?</li>
 </ul>
+
+<div style="display: block; width: 100%;">
+<ul class="steps">
+    <li>1. Registrer eposten på jobben</li>
+    <li>2. Legg inn hva du tjente før og den nye lønnen</li>
+    <li>3. Se hvordan du ligger an!</li>
+</ul>
+</div>
 <form action="/register" method="post">
     <fieldset>
-        <legend>Registrer din epost for å motta nyheter om når tjensten åpnes.</legend>
+        <legend>Vi sender deg epost når tjenesten er oppe.</legend>
         <label for="email"></label>
         <input type="text" name="email" id="email" value=""/>
         <label>
@@ -20,3 +28,9 @@ function track(email){
         </label>
     </fieldset>
 </form>
+<footer>
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Ffinn.no&amp;layout=standard&amp;show_faces=false&amp;width=215&amp;action=like&amp;colorscheme=light&amp;height=45"
+            scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:215px; height:45px;" allowTransparency="true"></iframe>
+    <a>Tweet it!</a>
+    <a href="http://twitter.com/liggeran">Følg @liggeran</a>
+</footer>

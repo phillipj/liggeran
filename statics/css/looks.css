@@ -12,6 +12,25 @@ h1 {
 	font-size: 3.0em;
 	font-family: Tahoma, Verdana, sans-serif;
 }
+.steps {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	margin: 16px 0 16px 0;
+	padding: 20px 0 20px 0;
+	float: left;
+}
+.steps li {
+	display: block;
+	float: left;
+	background-color: #666;
+	color: #000;
+	border-radius: 8px 8px;
+	height: 90px;
+	width: 25%;
+	padding: 12px;
+	margin-right: 8px;
+}
 input[type="submit"], button {
 	border-radius: 4px 4px;
 	padding: 9px;
@@ -37,4 +56,10 @@ fieldset {
 legend {
 	font-size: 1.5em;
 	margin-top: 20px;
+}
+footer {
+	margin-top: 20px;
+}
+footer a {
+	margin-right: 8px;
 }
