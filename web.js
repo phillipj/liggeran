@@ -5,7 +5,6 @@ var app = express.createServer(express.logger());
 app.set('view engine', 'mustache');
 app.register('.mustache', stache);
 app.use(express.static(__dirname + '/statics'));
-
 app.get('/', function(req, res){
 	res.render('main', {
 		locals: {
@@ -13,11 +12,34 @@ app.get('/', function(req, res){
 	})
 });
 
+
+// ===========================================
+//  Verification process
+// ===========================================
+app.get('/verify', isVerificationRequest, function(req, res){
+	if (){
+		res.send("ok");
+	} else {
+		res.send("failed");
+	}
+});
+
+function isVerificationRequest(req, res, next) {
+	var acknowledgeToken = "token";
+	console.log("isVerificationRequest");
+	if (typeof req.query[acknowledgeToken] != 'undefined'){
+		var token = req.query[acknowledgeToken].trim();
+		// lookup token in db
+	}
+}
+
+// ===========================================
+//  App initialization
+// ===========================================
 var port = process.env.PORT || 5000;
 app.listen(port, function(){
 	console.log('Listening on port: ' + port);
 });
-
 
 var initDatabase = function(){
 	var pg = require('pg');
