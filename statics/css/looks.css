@@ -21,7 +21,7 @@ h1 {
 	float: left;
 }
 .steps li {
-	display: block;
+	display: inline;
 	float: left;
 	background-color: #666;
 	color: #000;
