@@ -20,7 +20,7 @@ h1 {
 	padding: 20px 0 20px 0;
 	float: left;
 }
-.steps li {
+.steps p {
 	display: inline;
 	float: left;
 	background-color: #666;
