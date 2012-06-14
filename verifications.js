@@ -3,10 +3,15 @@ var pg = require('pg').native
   , client
   , query;
 
+console.log("connecting");
 client = new pg.Client(connectionString);
 client.connect();
-query = client.query('select * from verifications')
+console.log("query");
+query = client.query('select token, ip from verifications')
 .on('row',function(row){
 	console.log(row);
 })
-.on('end', function() { client.end(); });
+.on('end', function() { 
+	console.log("request ended");
+	client.end(); 
+});
