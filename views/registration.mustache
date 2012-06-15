@@ -1,6 +1,7 @@
 <script>
 function track(email){
     _gaq.push(['_trackEvent', 'Liggeran', 'Click', email]);
+    document.getElementById("registration").submit();
 }
 </script>
 <h1>Hvordan ligger du an?</h1>
@@ -26,12 +27,12 @@ function track(email){
         </div>
     </div>
 </div>
-<form action="/register" method="post">
+<form action="/register" method="post" id="registration">
     <fieldset>
         <label for="email"></label>
         <input type="text" name="email" id="email" value="" placeholder="Epostvarsel når vi åpner"/>
         <label>
-            <input type="submit" value="Send" onClick="return track(document.getElementById('email').value);">
+            <input type="button" value="Send" onClick="return track(document.getElementById('email').value);">
         </label>
     </fieldset>
 </form>
