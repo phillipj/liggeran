@@ -1,3 +1,4 @@
+<section role="main">
 <script>
 function track(email){
     _gaq.push(['_trackEvent', 'Liggeran', 'Click', email]);
@@ -5,39 +6,47 @@ function track(email){
 }
 </script>
 <h1>Hvordan ligger du an?</h1>
-<!--<ul>
-<li>Hva fikk de som tjener samme som meg i lønssøkning?</li>
-<li>Burde du fått mer lønnsøkning?</li>
-<li>Fikk alle andre mer enn deg dette oppgjøret?</li>
-</ul>-->
-
-<div style="display: block; width: 100%;float: left;margin-bottom: 30px;">
-    <div class="steps">
-        <div>
-            <h2>Verifiser firma epost</h2>
-            <p>mittnavn@firma.mitt</p>
-        </div>
-        <div>
-            <h2>Legg inn lønnsøkning</h2>
-            <p>Før 425.000, nå 432.000,-</p>
-        </div>
-        <div>
-            <h2>Sammenligne</h2>
-            <p>Se hvordan din lønnsøkning er i forhold til ander i ditt firma</p>
-        </div>
-    </div>
+<div class="col1of2 dpadd">
+    <h2>Hva er dette?</h2>
+    <p>En oversikt over lønnsoppgjøret der du jobber.</p>
+    <p>Rapportert inn av dine kolleger. Du kan se om du fikk samme som de som tjener like mye eller mer.</p>
+    <p>Helt anonymt og uten innsyn.</p>
 </div>
-<form action="/register" method="post" id="registration">
-    <fieldset>
-        <label for="email"></label>
-        <input type="text" name="email" id="email" value="" placeholder="Epostvarsel når vi åpner"/>
-        <label>
-            <input type="button" value="Send" onClick="return track(document.getElementById('email').value);">
-        </label>
-    </fieldset>
-</form>
-<footer>
-    <div class="fb-like" data-href="http://liggeran.herokuapp.com/" data-send="true" data-width="450" data-show-faces="true"></div>
+<div class="col1of2 dpadd fancy">
+    <h2>Sammenligne med kolleger</h2>
+    <img src="gfx/screenshot.png">
+</div>
+<div class="col1of2 dpadd">
+    <h2>Hvem er dette laget for?</h2>
+    <ul>
+        <li>Ansatte i selskap hvor man ikke snakker om lønn</li>
+        <li>Alle ansatte uansett stilling</li>
+    </ul>
+</div>
+<div class="col1of2 dpadd">
+    <h2>Slik kommer du igang</h2>
+    <ol>
+       <li>Registrer firma epost</li>
+       <li>Legg inn lønnsøkning</li>
+       <li>Sammenligne</li>
+    </ol>
+</div><br clear="all">
+<div class="callToAction">
+    <form action="/register" method="post" id="registration">
+        <fieldset>
+            <p>Varsle meg når dere åpner</p>
+            <label for="email"></label>
+            <input type="text" name="email" id="email" value="" placeholder="Din firma epost"/>
+            <label>
+                <input type="button" value="Registrer meg" onClick="return track(document.getElementById('email').value);">
+            </label>
+        </fieldset>
+    </form>
+</div>
+<div class="promoFooter">
     <a href="https://twitter.com/liggeran" class="twitter-follow-button" data-show-count="false" data-lang="no">Følg @liggeran</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</footer>
+    <div class="fb-like" data-href="http://liggeran.herokuapp.com/" data-send="true" data-width="550" data-show-faces="false"></div>
+</div>
+
+</section>

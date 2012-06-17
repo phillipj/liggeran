@@ -7,10 +7,26 @@ fieldset {
 h1 {
 	margin: 0;
 }
-section[role="main"]{
-	width: 90%;
+.dpadd {
+	padding: 10px;
+}
+.col1of2 {
+	width: 100%;
+	display: block;
+	float: left;
+}
+.wrapper {
 	margin-left: 2%;
 	margin-right: 2%;
 	margin-top: 2%;
-	padding: 2%;
+	padding: 2%;	
+}
+section[role="main"]{
+	width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+	.col1of2 {
+		width: 47%;
+	}
 }

@@ -1,3 +1,4 @@
+/* http://kuler.adobe.com/#themeID/1921635 */
 body {
 	font-size: 16px;
 	font-family: arial, helvetica, verdana;
@@ -13,7 +14,30 @@ h1 {
 	font-family: Century Gothic, tahoma,sans-serif;
 	line-height: 0.9em;
 	display: block;
-	margin-bottom: 1%;
+	margin-bottom: 24px;
+}
+h2 {
+	font-size: 1.8em;
+	margin-bottom: 12px;
+	line-height: 1.5em;
+}
+ol li {
+	list-style: decimal inside;
+	line-height: 1.5em;
+}
+ul li {
+	list-style: disc inside;
+}
+dt {
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+dd {
+	padding-bottom: 24px;
+}
+.fancy {
+	background-color: #f0f0f0;
+	border-radius: 20px 20px;
 }
 .steps {
 	margin: 0;
@@ -26,28 +50,35 @@ h1 {
 	font-size: 1.4em;
 }
 .steps div {
-    float: left;
-	width: 100%;
 	margin-bottom: 2%;	
 }
 
-input[type="submit"], button {
+input[type="submit"], input[type="button"] {
 	border-radius: 4px 4px;
-	padding: 3%;
-	font-size: 1.2em;
-	background-color: #333;	
-	color: #f0f0f0;
-	border-color: #fff;
+	padding: 12px;
+	font-size: 1.0em;
+	background-color: #444;	
+	color: #fff;
+
 }
+input[type="submit"]:hover, input[type="button"]:hover {
+	background-color: #000;
+}
+
 input[type="text"]{
-	font-size: 1.2em;	
-	padding: 3%;
+	font-size: 1.0em;	
+	padding: 12px;
+	width: 80%;
 	border-radius: 4px 4px;
-	border-color: #333;
+	border-color: #444;
 }
-section[role="main"]{
-	background-color: #f0f0f0;
-	border-radius: 20px 20px;
+.callToAction {
+	border-radius: 10px 10px;
+	padding: 10px 0 10px 0 ;
+
+}
+.callToAction legend {
+	padding-bottom: 10px;
 }
 fieldset {
 	border: 0px;
@@ -56,45 +87,25 @@ legend {
 	font-size: 1.5em;
 	margin-top: 20px;
 }
+.promoFooter {
+	margin-top: 1%;
+}
 footer {
-	margin-top: 20px;
+	text-align: center;
+	background-color: #333;
+	color: #f0f0f0;
+	padding: 2%;
+	width: 100%;
 }
 footer a {
 	margin-right: 8px;
+	color: #eee;
 }
-@media only screen and (min-width: 320px) {
-	h1 {
-	}
-	.steps div {
-	}
-}
-@media only screen and (min-width: 480px) {
-	h1 {
-		font-size: 4em;
-	}
-	.steps div {
-	    width: 30%;
-		margin-bottom: 0;
-	}
-	input{
-		padding: 2%;
-		width: 15%;
-	}
-	input[type="text"]{
-		width: 70%;
-	}
-}
+footer a:hover {
+	color: #999;
+}	
 @media only screen and (min-width: 768px) {
 	h1 {
-		font-size: 6em;
-	}
-	input[type="text"]{
-		width: 70%;
-	}
-	
-}
-@media only screen and (min-width: 992px) {
-	h1 {
-		font-size: 8em;
+		font-size: 5em;		
 	}
 }

@@ -16,6 +16,17 @@ app.get('/', function(req, res){
 	})
 });
 
+app.get('/about',function(req, res){
+	res.render('about');
+});
+app.get('/privacy',function(req, res){
+	res.render('privacy');
+});
+app.get('/faq',function(req, res){
+	res.render('faq');
+});
+
+
 // ===========================================
 //  Registration process
 // ===========================================
