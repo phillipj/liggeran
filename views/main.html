@@ -1,0 +1,65 @@
+<!dcotype HTML>
+<style>
+body {
+	color: #f0f0f0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+}
+.splash {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-image: url('./img/bgr2.jpg');
+}
+.regform {
+	position: fixed;
+	top: 20%;
+	margin-left: 40%;
+	display: block;
+}
+label {
+	clear: both;
+	width: 100%;
+	display: block;
+	font-size: 1.5em;
+}
+input {
+	width: 100%;
+	font-size: 1.5em;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+button {
+	border-color: red;
+	font-size: 1.6em;
+	background-color: rgba(200,20,20, .7);
+	color: ;
+}
+</style>
+<body class="splash">
+	
+	<div class="regform">
+		<form>
+			<legend>
+				<h1>Hvordan ligger du an?</h1>
+			</legend>
+			<div>
+				<label>Epost:</label>
+				<input type="email">
+			</div>
+			<div>
+				<label>Lønn:</label>
+				<input type="currency">
+			</div>
+			<div>
+				<label>Års arbeidserfaring:</label>
+				<input type="number">
+			</div>
+			<button type="submit">Se hvordan jeg ligger an</button>
+		</form>
+	</div>
+</body>
