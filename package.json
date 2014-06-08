@@ -1,13 +1,8 @@
 {
-  "name": "application-name",
+  "name": "liggeran",
   "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
+  "main": "index.js",
   "dependencies": {
-    "express": "3.2.3",
-    "cradle": "0.6.6",
-    "ejs": "*"
+    "hapi": "^5.1.0"
   }
 }
