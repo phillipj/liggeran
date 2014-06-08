@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "lib/app.js",
   "scripts": {
-  	"start": "node lib/app.js",
+    "start": "node lib/app.js",
     "watch": "nodemon  --ext js,html --watch views/ --watch public/ --watch lib/ lib/app.js"
   },
   "devDependencies": {
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "hapi": "^5.1.0",
-    "handlebars": "^2.0.0-alpha.4"
+    "handlebars": "^2.0.0-alpha.4",
+    "i18n-2": "^0.4.6"
   }
 }
