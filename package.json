@@ -1,13 +1,19 @@
 {
-  "name": "application-name",
+  "name": "liggeran",
   "version": "0.0.1",
-  "private": true,
+  "main": "lib/app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node lib/app.js",
+    "watch": "./node_modules/.bin/nodemon  --ext js,html --watch views/ --watch public/ --watch lib/ lib/app.js",
+    "test": "./node_modules/.bin/jshint ."
+  },
+  "devDependencies": {
+    "nodemon": "^1.2.0",
+    "jshint": "^2.5.1"
   },
   "dependencies": {
-    "express": "3.2.3",
-    "cradle": "0.6.6",
-    "ejs": "*"
+    "hapi": "^5.1.0",
+    "handlebars": "^2.0.0-alpha.4",
+    "i18n-2": "^0.4.6"
   }
 }
