@@ -4,10 +4,12 @@
   "main": "lib/app.js",
   "scripts": {
     "start": "node lib/app.js",
-    "watch": "nodemon  --ext js,html --watch views/ --watch public/ --watch lib/ lib/app.js"
+    "watch": "./node_modules/.bin/nodemon  --ext js,html --watch views/ --watch public/ --watch lib/ lib/app.js",
+    "test": "./node_modules/.bin/jshint ."
   },
   "devDependencies": {
-    "nodemon": "^1.2.0"
+    "nodemon": "^1.2.0",
+    "jshint": "^2.5.1"
   },
   "dependencies": {
     "hapi": "^5.1.0",
