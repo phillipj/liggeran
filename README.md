@@ -8,7 +8,7 @@ Add your email, years of work experience and current salary. Then compare with o
 You email is never disclosed and is only used to verify that you work for the company. 
 
 [![Build Status](https://travis-ci.org/liggeran/liggeran.png)](https://travis-ci.org/liggeran/liggeran)
-[![Dependency Status](https://david-dm.org/liggeran/liggeran.png)](https://david-dm.org/gardr/liggeran)
+[![Dependency Status](https://david-dm.org/liggeran/liggeran.png)](https://david-dm.org/liggeran/liggeran)
 [![devDependency Status](https://david-dm.org/liggeran/liggeran/dev-status.png)](https://david-dm.org/liggeran/liggeran#info=devDependencies)
 
 
