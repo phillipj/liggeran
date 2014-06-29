@@ -17,13 +17,22 @@ You email is never disclosed and is only used to verify that you work for the co
 	$ npm install
 	$ npm start
 
-## Architecture
+## Deploying
 
-* Hapi
-* LevelDB
+The application is running on [Heroku](http://www.heroku.com), to deploy you must have access application. Then add the Heroku remote:
 
-Everything else is up in the air and up to us to decide.
+	$ git remote add heroku git@heroku.com:liggeran-org.git
+	# When you've made some update
+	$ git push heroku master
+
+The application is running on [http://www.liggeran.org](http://www.liggeran.org).
 
 ## Contributing?
 
-I'd love for people to contribute, as I only have so much time...
+I'd love for people to contribute, as I only have so much time.
+
+* [jarib](//github.com/jarib)
+* [sveisvei](//github.com/sveisvei)
+* [ivarconr](//github.com/ivarconr)
+* [thomanil](//github.com/thomanil)
+* [elisabethirgens](//github.com/elisabethirgens)
