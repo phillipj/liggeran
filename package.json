@@ -8,13 +8,14 @@
     "test": "./node_modules/.bin/jshint ."
   },
   "devDependencies": {
-    "nodemon": "^1.2.0",
-    "jshint": "^2.5.1"
+    "jshint": "^2.5.1",
+    "nodemon": "^1.2.0"
   },
   "dependencies": {
-    "hapi": "^6.0.x",
     "handlebars": "^2.0.0-alpha.4",
-    "i18n-2": "^0.4.6"
+    "hapi": "^6.0.x",
+    "i18n-2": "^0.4.6",
+    "joi": "^4.6.1"
   },
   "engines": {
     "node": "0.10.x"

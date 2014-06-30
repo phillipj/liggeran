@@ -4,10 +4,11 @@ var registerSalaryConfig = {
 	handler: function(request, reply){
 		request.log(['registering salary']);
         console.log('handler...');
+        reply('success');
     },
     validate: {
     	query: {
-    		workEmail: joi.string().max(100)
+    		workEmail: joi.string().min(5).max(100)
     	}
     }
 };

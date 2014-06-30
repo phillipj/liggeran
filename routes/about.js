@@ -1,7 +1,4 @@
-var i18n = new (require('i18n-2'))({
-    locales: ['no', 'en'],
-    cookie: 'locale'
-});
+var i18n = require('../lib/i18nConfig');
 
 module.exports = {
 	handler: function(request, reply){

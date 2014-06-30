@@ -29,7 +29,9 @@ The application is running on [http://www.liggeran.org](http://www.liggeran.org)
 
 ## Contributing?
 
-I'd love for people to contribute, as I only have so much time.
+Read the project docs about things like [i18n](i18n.md).
+
+I'd love for people to contribute, as I only have so much time. Here are some of the contributors:
 
 * [jarib](//github.com/jarib)
 * [sveisvei](//github.com/sveisvei)
