@@ -2,3 +2,10 @@ node_modules
 .DS_Store
 liggeran_data.dump
 *.log
+*private*.pem
+*.p12
+*.pfx
+*.pem
+*.csr
+*.crt
+*.key

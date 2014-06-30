@@ -12,6 +12,7 @@
     "nodemon": "^1.2.0"
   },
   "dependencies": {
+    "convict": "^0.4.2",
     "handlebars": "^2.0.0-alpha.4",
     "hapi": "^6.0.x",
     "i18n-2": "^0.4.6",
