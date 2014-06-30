@@ -17,10 +17,15 @@ You email is never disclosed and is only used to verify that you work for the co
 	$ npm install
 	$ npm start
 
+## Testing
+	
+	$ npm test
+
 ## Deploying
 
 The application is running on [Heroku](http://www.heroku.com), to deploy you must have access application. Then add the Heroku remote:
 
+	$ npm test
 	$ git remote add heroku git@heroku.com:liggeran-org.git
 	# When you've made some update
 	$ git push heroku master
