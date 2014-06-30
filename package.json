@@ -12,7 +12,7 @@
     "jshint": "^2.5.1"
   },
   "dependencies": {
-    "hapi": "^5.1.0",
+    "hapi": "^6.0.x",
     "handlebars": "^2.0.0-alpha.4",
     "i18n-2": "^0.4.6"
   },
