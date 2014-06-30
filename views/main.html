@@ -1,33 +1,8 @@
 <!dcotype HTML>
-<style>
-body {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 18px;
-}
-.regform {
-	position: fixed;
-	top: 20%;
-	margin-left: 40%;
-	display: block;
-}
-label {
-	clear: both;
-	width: 100%;
-	display: block;
-	font-size: 1.5em;
-}
-input {
-	width: 100%;
-	font-size: 1.5em;
-	margin-top: 2%;
-	margin-bottom: 2%;
-}
-</style>
+{{> metas}}
+{{> styling}}
 <body>
-	<ul>
-		<li><a href="?locale=no">Norsk</a></li>
-		<li><a href="?locale=en">English</a></li>
-	</ul>
+	{{> topToolbar}}
 	<div class="regform">
 		<form>
 			<legend>
@@ -48,4 +23,5 @@ input {
 			<button type="submit">{{{__ "registration_register_button"}}}</button>
 		</form>
 	</div>
+	{{> footer}}
 </body>
