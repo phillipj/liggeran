@@ -10,6 +10,7 @@ You email is never disclosed and is only used to verify that you work for the co
 [![Build Status](https://travis-ci.org/liggeran/liggeran.png)](https://travis-ci.org/liggeran/liggeran)
 [![Dependency Status](https://david-dm.org/liggeran/liggeran.png)](https://david-dm.org/liggeran/liggeran)
 [![devDependency Status](https://david-dm.org/liggeran/liggeran/dev-status.png)](https://david-dm.org/liggeran/liggeran#info=devDependencies)
+[ ![Codeship Status for liggeran/liggeran](https://codeship.com/projects/61994c30-5c77-0132-88d4-3269830c2e14/status)](https://codeship.com/projects/50853)
 
 
 ## Installing and running
