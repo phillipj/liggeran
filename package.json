@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "jshint": "^2.5.1",
-    "nodemon": "^1.2.0"
+    "nodemon": "^1.2.0",
+    "spaden": "^2.0.9"
   },
   "dependencies": {
     "convict": "^0.4.2",

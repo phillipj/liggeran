@@ -14,7 +14,7 @@
     "es3": false,
     "forin": false,
     "immed": true,
-    "indent": 4,
+    "indent": 2,
     "latedef": "nofunc",
     "newcap": true,
     "noarg": true,

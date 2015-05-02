@@ -1,0 +1,34 @@
+<!dcotype HTML>
+{{> metas}}
+{{> styling}}
+<body>
+	{{> topToolbar}}
+	<div class="regform">
+		<form action="/register" method="POST">
+
+			<legend>
+				<h1>{{{__ "registration_header"}}}</h1>
+			</legend>
+			<div class="formelement">
+				<label>{{{__ "registration_email"}}}:</label>
+				<div class="input">
+					<input type="email">
+				</div>
+			</div>
+			<div class="formelement">
+				<label>{{{__ "registration_salary"}}}</label>
+				<div class="input">
+					<input type="currency">
+				</div>
+			</div>
+			<div class="formelement">
+				<label>{{{__ "registration_years_working"}}}</label>
+				<div class="input">
+					<input type="number">
+				</div>
+			</div>
+			<button type="submit">{{{__ "registration_register_button"}}}</button>
+		</form>
+	</div>
+	{{> footer}}
+</body>

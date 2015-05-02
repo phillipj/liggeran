@@ -1,16 +1,4 @@
 body {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 18px;
-}
-label {
-	clear: both;
-	width: 100%;
-	display: block;
-	font-size: 1.5em;
-}
-input {
-	width: 100%;
-	font-size: 1.5em;
-	margin-top: 2%;
-	margin-bottom: 2%;
+	background-color: #f0f0f0;
 }
