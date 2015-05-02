@@ -1,0 +1,21 @@
+<div class="regform">
+  <form action="/verify" method="POST">
+
+    <legend>
+      <h1>{{{__ "verification_header"}}}</h1>
+    </legend>
+    <div class="formelement">
+      <label>{{{__ "verification_personal_email"}}}:</label>
+      <div class="input">
+        <input name="privateEmail" type="email">
+      </div>
+    </div>
+    <div class="formelement">
+      <label>{{{__ "verification_work_email"}}}:</label>
+      <div class="input">
+        <input name="workEmail" type="email">
+      </div>
+    </div>
+    <button type="submit">{{{__ "verification_register_button"}}}</button>
+  </form>
+</div>

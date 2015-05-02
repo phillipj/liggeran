@@ -10,5 +10,11 @@
     "registration_email": "Email",
     "registration_salary": "Base salary",
     "registration_years_working": "Years working",
-    "registration_register_button": "See how you are doing"
+    "registration_register_button": "See how you are doing",
+		"verification_page_title":  "Verifiser ansettelse",
+			"verification_header": "..",
+			"verification_help": "help text..",
+			"verification_personal_email": "Privat email",
+			"verification_work_email": "Jobb email",
+			"verification_register_button": "Send verification"
 }

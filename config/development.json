@@ -1,3 +1,8 @@
 {
-	"tls": false
+	"tls": false,
+	"email": {
+		"server": {
+			"api-key": "DUMMY"
+		}
+	}
 }

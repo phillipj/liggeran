@@ -1,0 +1,5 @@
+{
+  "name": "liggeran-email",
+  "description": "Email sending service Hapi plugin",
+  "version": "0.0.1"
+}

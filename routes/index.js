@@ -1,5 +1,5 @@
 var fs = require('fs');
-var i18n = require('../i18nConfig');
+var i18n = require('../lib/i18nConfig');
 var Joi = require('joi');
 
 function setLocale(locale){
@@ -21,6 +21,24 @@ module.exports = function(server){
 			        });
 			    }
 			}
+	}, {
+		method: 'GET',
+		path: '/verify',
+		config: {
+			handler: require('../handlers/verification/show-verify-form')
+		}
+	}, {
+		method: 'POST',
+		path: '/verify',
+		config: {
+			handler: require('../handlers/verification/handle-verification'),
+			validate: {
+				payload: {
+					privateEmail: Joi.string().email(),
+					workEmail: Joi.string().email()
+				}
+			}
+		}
 	}, {
 	    method: 'POST',
 	    path: '/register',

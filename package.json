@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "main": "lib/app.js",
   "scripts": {
-    "start": "node lib/app.js",
-    "watch": "./node_modules/.bin/nodemon  --ext js,html --watch views/ --watch public/ --watch lib/ lib/app.js",
+    "start": "node server.js",
+    "watch": "./node_modules/.bin/nodemon  --ext js,html --watch views/ --watch public/ --watch lib/ --watch routes/ --watch handlers/ --watch plugins/ --watch *.js server.js",
     "test": "./node_modules/.bin/jshint ."
   },
   "devDependencies": {
@@ -14,10 +14,12 @@
   },
   "dependencies": {
     "convict": "^0.4.2",
+    "good": "^6.1.2",
+    "good-console": "^5.0.0",
     "handlebars": "^2.0.0-alpha.4",
-    "hapi": "^7.0.x",
+    "hapi": "^8.4.x",
     "i18n-2": "^0.4.6",
-    "joi": "^4.6.1"
+    "joi": "^6.0.8"
   },
   "engines": {
     "node": "0.10.x"
