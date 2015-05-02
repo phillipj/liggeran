@@ -37,6 +37,8 @@ The application is running on [http://www.liggeran.org](http://www.liggeran.org)
 
 ## Contributing?
 
+Come join [our Slack](https://liggeran.slack.com/) 
+
 Read the project docs about things like [i18n](i18n.md).
 
 I'd love for people to contribute, as I only have so much time. Here are some of the contributors:
