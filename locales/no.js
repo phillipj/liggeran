@@ -1,4 +1,3 @@
-/*jshint maxlen:false*/
 {
 	"main_page_title": "liggeran.org - åpenhet rundt lønn",
 	"about_page_title": "Om liggeran.org",
