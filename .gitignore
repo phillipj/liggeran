@@ -9,3 +9,4 @@ liggeran_data.dump
 *.csr
 *.crt
 *.key
+keys.txt
