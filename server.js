@@ -5,7 +5,8 @@ var config = require('./lib/config');
 
 var hapiOptions = {
   debug: {
-    request: ['debug']
+    request: ['debug'],
+    log: ['debug']
   }
 };
 
@@ -34,6 +35,7 @@ var serverConnection = server.connection({
     stripTrailingSlash: true
   }
 });
+
 server.register({
   register: require('good'),
   options: {
