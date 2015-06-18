@@ -1,10 +1,10 @@
 module.exports = function(){
 	return [{
-	    method: 'GET',
-	    path: '/{path*}',
-	    handler: {
-	        directory: { path: './public', listing: false, index: true }
-	    }
+    method: 'GET',
+    path: '/{path*}',
+    handler: {
+      directory: { path: './public', listing: false, index: true }
+    }
 	}, {
 		method: 'GET',
 		path: '/css/spaden/{path*}',

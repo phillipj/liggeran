@@ -1,4 +1,7 @@
 <div class="regform">
+  {{#if validationError}}
+    Error:{{validationError}}
+  {{/if}}
   <form action="/verify" method="POST">
 
     <legend>
