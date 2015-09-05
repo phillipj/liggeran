@@ -8,18 +8,18 @@
     "test": "./node_modules/.bin/jshint ."
   },
   "devDependencies": {
-    "jshint": "^2.5.1",
+    "jshint": "^2.8.0",
     "nodemon": "^1.2.0",
-    "spaden": "^2.0.9"
+    "spaden": "^3.0.9"
   },
   "dependencies": {
-    "convict": "^0.4.2",
-    "good": "^6.1.2",
-    "good-console": "^5.0.0",
-    "handlebars": "^2.0.0-alpha.4",
-    "hapi": "^8.4.0",
+    "convict": "^0.8.0",
+    "good": "^6.1.4",
+    "good-console": "^5.0.2",
+    "handlebars": "^3.0.3",
+    "hapi": "^8.6.1",
     "i18n-2": "^0.4.6",
-    "joi": "^6.0.8",
+    "joi": "^6.4.3",
     "mandrill-api": "^1.0.45"
   },
   "engines": {
