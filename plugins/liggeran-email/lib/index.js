@@ -5,7 +5,7 @@ var internals ={};
 internals.send = function(options, callback){
   var content = {};
   var key = process.env.MANDRILL_KEY;
-  var mandrill = new mandrill.Mandrill(key);
+  var client = new mandrill.Mandrill(key);
 
   var sendOptions = {
     template_name: 'verify_email',
@@ -23,7 +23,7 @@ internals.send = function(options, callback){
       important: 'true'
     }
   };
-  mandrill.messages.sendTemplate(sendOptions, function(result){
+  client.messages.sendTemplate(sendOptions, function(result){
     callback(null, result);
   }, function(err){
     if (err){
