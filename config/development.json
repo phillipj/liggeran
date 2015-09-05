@@ -4,5 +4,8 @@
 		"server": {
 			"api-key": "DUMMY"
 		}
+	},
+	"datastore": {
+		"url": "postgres://localhost:5432/liggeran"
 	}
 }

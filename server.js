@@ -69,7 +69,15 @@ server.views({
 server.route(require('./routes/')(server));
 var emailPlugin = require('./plugins/liggeran-email');
 var userPlugin = require('./plugins/liggeran-user');
-serverConnection.register([emailPlugin, userPlugin], function(err) {
+
+serverConnection.register([
+  emailPlugin,
+  {
+    register: userPlugin,
+    options: {
+      dburl: config.get('datastore.url')
+    }
+  }], function(err) {
   if (err) {
     server.log('error', err);
     throw err;
