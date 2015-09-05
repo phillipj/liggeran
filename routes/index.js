@@ -43,7 +43,7 @@ module.exports = function(server){
         failAction: function(request, reply, source, error){
           //console.log('debug,error', ['Validattion error', error]);
           request.validationError = error;
-          reply.continue();
+          return reply(require('../handlers/verification/show-verify-form'));//continue();
         }
 			}
 		}

@@ -5,9 +5,9 @@ var internals ={};
 internals.send = function(options, callback){
   var content = {};
   var key = process.env.MANDRILL_KEY;
-  var wreck = new mandrill.Mandrill(key);
+  var mandrill = new mandrill.Mandrill(key);
 
-  var wreckOpts = {
+  var sendOptions = {
     template_name: 'verify_email',
     template_content: [
     ],
@@ -23,19 +23,19 @@ internals.send = function(options, callback){
       important: 'true'
     }
   };
-  wreck.messages.sendTemplate(wreckOpts, function(result){
+  mandrill.messages.sendTemplate(sendOptions, function(result){
     callback(null, result);
   }, function(err){
     if (err){
-      console.error('Send mail error', err);
       callback(err);
     }
   });
 };
 exports.register = function (server, options, next) {
-  console.log('Creating email plugin');
+  server.log('info', 'Creating email plugin');
 
   server.method('service.email.send', internals.send);
+
 	next();
 };
 exports.register.attributes = {

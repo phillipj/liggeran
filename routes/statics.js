@@ -9,7 +9,7 @@ module.exports = function(){
 		method: 'GET',
 		path: '/css/spaden/{path*}',
 		handler: {
-			directory: { path: './node_modules/spaden/dist/spaden-2.0.9/', listing: false, index: true }
+			directory: { path: './node_modules/spaden/dist/spaden-2.0.10/', listing: false, index: true }
 		}
 	}];
 };

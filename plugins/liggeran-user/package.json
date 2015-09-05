@@ -1,0 +1,8 @@
+{
+  "name": "liggeran-user",
+  "description": "User service",
+  "version": "0.0.1",
+  "dependencies": {
+
+  }
+}
