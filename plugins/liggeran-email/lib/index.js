@@ -1,16 +1,25 @@
 var mandrill = require('mandrill-api/mandrill');
+var mqtt = require('mqtt');
+var internals = {};
 
-var internals ={};
+var mqClient = mqtt.connect('mqtt://localhost');
+mqClient.on('connect', function() {
+  mqClient.subscribe('registered');
+});
 
-internals.send = function(options, callback){
+mqClient.on('message', function(topic, message) {
+  var user = JSON.parse(message.toString());
+  console.log(user);
+});
+
+internals.send = function(options, callback) {
   var content = {};
   var key = process.env.MANDRILL_KEY;
   var client = new mandrill.Mandrill(key);
 
   var sendOptions = {
     template_name: 'verify_email',
-    template_content: [
-    ],
+    template_content: [],
     message: {
       global_merge_vars: content,
       html: options.text,
@@ -23,21 +32,21 @@ internals.send = function(options, callback){
       important: 'true'
     }
   };
-  client.messages.sendTemplate(sendOptions, function(result){
+  client.messages.sendTemplate(sendOptions, function(result) {
     callback(null, result);
-  }, function(err){
-    if (err){
+  }, function(err) {
+    if (err) {
       callback(err);
     }
   });
 };
-exports.register = function (server, options, next) {
+exports.register = function(server, options, next) {
   server.log('info', 'Creating email plugin');
 
   server.method('service.email.send', internals.send);
 
-	next();
+  next();
 };
 exports.register.attributes = {
-    pkg: require('../package.json')
+  pkg: require('../package.json')
 };

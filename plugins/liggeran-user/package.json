@@ -3,6 +3,7 @@
   "description": "User service",
   "version": "0.0.1",
   "dependencies": {
-
+    "pg": "^4.4.1",
+    "mqtt": "^1.4.0"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "name": "liggeran-buzz",
+  "description": "Message buzz service",
+  "version": "0.0.1",
+  "dependencies": {
+    "mosca": "^0.32.0"
+  }
+}

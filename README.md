@@ -29,7 +29,6 @@ You email is never disclosed and is only used to verify that you work for the co
 	$ npm install
 	$ npm start
 
-
 ## Testing
 
 	$ npm test
@@ -44,6 +43,20 @@ The application is running on [Heroku](http://www.heroku.com), to deploy you mus
 	$ git push heroku master
 
 The application is running on [http://www.liggeran.org](http://www.liggeran.org).
+## Technology
+
+### Postgresql
+
+We deal with structured data, hence it made sense.
+
+### Hapi
+
+Easy to create modular service APIs
+
+### MQTT
+
+We use [mosca](https://github.com/mcollina/mosca) and [mqtt](https://www.npmjs.com/package/mqtt) for simple messaging
+between the plugins and services instead of relying on just Hapi.
 
 ## Contributing?
 
