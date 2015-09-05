@@ -17,7 +17,7 @@ internals.start = function() {
     console.log('mosca: client connected', client.id);
   });
 
-  server.on('published', function(packet, client) {
+  server.on('published', function(packet /*, client*/ ) {
     console.log('mosca: Published', packet.payload);
   });
 

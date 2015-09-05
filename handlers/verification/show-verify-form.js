@@ -9,7 +9,7 @@ module.exports = function(request, reply) {
       privateEmail: request.payload.privateEmail,
       companyEmail: request.payload.workEmail
     };
-    request.server.methods.service.user.create(options, function(err, result) {
+    request.server.methods.service.user.create(options, function(err) {
       if (err) {
         request.log('error', ['Error creating user', err]);
         return reply(err);
