@@ -9,22 +9,25 @@
   },
   "devDependencies": {
     "jshint": "^2.8.0",
-    "nodemon": "^1.2.0",
-    "spaden": "^3.0.9"
+    "nodemon": "^1.4.1"
   },
   "dependencies": {
-    "convict": "^0.8.0",
-    "good": "^6.1.4",
-    "good-console": "^5.0.2",
-    "handlebars": "^3.0.3",
-    "hapi": "^8.6.1",
+    "convict": "^1.0.1",
+    "good": "^6.3.0",
+    "good-console": "^5.0.3",
+    "handlebars": "^4.0.2",
+    "hapi": "^9.2.0",
+    "hoek": "^2.14.0",
     "i18n-2": "^0.4.6",
-    "joi": "^6.4.3",
+    "inert": "^3.0.1",
+    "joi": "^6.6.1",
     "mandrill-api": "^1.0.45",
     "mosca": "^0.32.0",
     "mqtt": "^1.4.0",
     "pg": "^4.4.1",
-    "uuid": "^2.0.1"
+    "spaden": "^3.0.9",
+    "uuid": "^2.0.1",
+    "vision": "^3.0.0"
   },
   "engines": {
     "io": "^1.8.1"

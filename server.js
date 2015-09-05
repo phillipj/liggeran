@@ -1,4 +1,5 @@
 var Hapi = require('hapi');
+var Hoek = require('hoek');
 var fs = require('fs');
 var i18n = require('./lib/i18nConfig');
 var config = require('./lib/config');
@@ -54,18 +55,50 @@ server.register({
   }
 });
 
-server.views({
-  engines: {
-    html: hbs
-  },
-  path: './views',
-  /*  isCached: !development,*/
-  partialsPath: './views/partials',
-  /*helpersPath: './views/helper',*/
-  layoutPath: './views/templates',
-  layout: 'default',
-  compileMode: 'sync'
+server.register(require('vision'), function(err) {
+  Hoek.assert(!err, err);
+  server.views({
+    engines: {
+      html: {
+        module: hbs,
+        compileMode: 'sync'
+      }
+    },
+    path: './views',
+    /*  isCached: !development,*/
+    partialsPath: './views/partials',
+    /*helpersPath: './views/helper',*/
+    layout: 'default',
+    layoutPath: './views/templates',
+  });
 });
+
+server.register(require('inert'), function(err) {
+  Hoek.assert(!err, err);
+
+  server.route([{
+    method: 'GET',
+    path: '/{path*}',
+    handler: {
+      directory: {
+        path: './public',
+        listing: false,
+        index: true
+      }
+    }
+  }, {
+    method: 'GET',
+    path: '/css/spaden/{path*}',
+    handler: {
+      directory: {
+        path: './node_modules/spaden/dist/',
+        listing: false,
+        index: true
+      }
+    }
+  }]);
+});
+
 server.route(require('./routes/')(server));
 var emailPlugin = require('./plugins/liggeran-email');
 var userPlugin = require('./plugins/liggeran-user');
