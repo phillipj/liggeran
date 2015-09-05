@@ -5,28 +5,28 @@ var config = require('./lib/config');
 
 var hapiOptions = {
   debug: {
-    request: ['debug'],
-    log: ['debug']
+    request: ['*'],
+    log: ['*']
   }
 };
 
 if (config.get('tls')){
-    console.log('configuring TLS');
-    hapiOptions.tls = {
-      ca: fs.readFileSync('ca.pem'),
-      key: fs.readFileSync('liggeran-ssl-private.key'),
-      cert: fs.readFileSync('liggeran-ssl.crt')
-    };
+  console.log('configuring TLS');
+  hapiOptions.tls = {
+    ca: fs.readFileSync('ca.pem'),
+    key: fs.readFileSync('liggeran-ssl-private.key'),
+    cert: fs.readFileSync('liggeran-ssl.crt')
+  };
 }
 
 var server = new Hapi.Server(hapiOptions);
 
 var hbs = require('handlebars');
 hbs.registerHelper('__', function (key) {
-    return i18n.__(key);
+  return i18n.__(key);
 });
 hbs.registerHelper('__n', function () {
-    return i18n.__n.apply(this, arguments);
+  return i18n.__n.apply(this, arguments);
 });
 
 var serverConnection = server.connection({
@@ -41,20 +41,17 @@ server.register({
   options: {
     reporters: [{
       reporter: require('good-console'),
-      events: [{
+      events: {
         log: '*',
-        response: '*',
-        error: '*',
         request: '*',
-        ops: '*'
-      }]
+        error: '*'
+      }
     }]
   }
 }, function(err){
   if (err) {
-    throw err;
+    console.log('Error Initializing Good singnaling', err);
   }
-  server.log('debug', 'I am running');
 });
 
 server.views({
@@ -70,8 +67,9 @@ server.views({
   compileMode: 'sync'
 });
 server.route(require('./routes/')(server));
-
-serverConnection.register(require('./plugins/liggeran-email'), function(err) {
+var emailPlugin = require('./plugins/liggeran-email');
+var userPlugin = require('./plugins/liggeran-user');
+serverConnection.register([emailPlugin, userPlugin], function(err) {
   if (err) {
     server.log('error', err);
     throw err;
@@ -80,5 +78,5 @@ serverConnection.register(require('./plugins/liggeran-email'), function(err) {
 });
 
 server.start(function () {
-    console.info('Server started..' + server.info.uri);
+    server.log('info', 'Server started..' + server.info.uri);
 });
