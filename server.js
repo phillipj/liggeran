@@ -106,18 +106,21 @@ var userPlugin = require('./plugins/liggeran-user');
 var buzz = require('./plugins/liggeran-buzz');
 
 serverConnection.register([{
-    register: buzz,
-    options: {
-      port: 1883
-    }
-  },
-  emailPlugin, {
-    register: userPlugin,
-    options: {
-      dburl: config.get('datastore.url')
-    }
+  register: buzz,
+  options: {
+    port: 1883
   }
-], function(err) {
+}, {
+  register: emailPlugin,
+  options: {
+    apikey: config.get('email.server.apikey')
+  }
+}, {
+  register: userPlugin,
+  options: {
+    dburl: config.get('datastore.url')
+  }
+}], function(err) {
   if (err) {
     server.log('error', err);
     throw err;
